@@ -22,12 +22,12 @@ This site provides details about the workshop, competition tracks, datasets, sub
 2. **Digital Manipulation Localization in ID documents**
 
 ## 📅 Important Dates
-- **Dataset Release:** July 15, 2025  
-- **Submission Deadline:** September 10, 2025  
+- **Dataset Release:** May 23, 2025  
+- **Workshoo Paper Submission Deadline:** June 22, 2025  
 - **Workshop Date:** October 2025 (TBD)
 
 ## 🧑‍💼 Organizers
-- Pavel Korshunov (Idiap Research Institute)
+- Idiap Research Institute (contact name: Pavel Korshunov)
 - PXL Vision
 
 ## 🔑 License
