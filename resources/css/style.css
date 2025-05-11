@@ -1,0 +1,551 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* header {
+  background: #003366;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+} */
+
+header h1, header h2 {
+  margin: 0.5rem 0;
+}
+
+/* .logos img {
+  height: 50px;
+  margin: 0 10px;
+} */
+
+h2{
+  font-size: 1.6rem;
+  /* color: #fff; */
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  /* font-weight: 600; */
+  text-align: center;
+}
+
+h2::after{
+  content:"";
+  display: block;
+  height: .2rem;
+  background: #fff;
+  width: 6.5rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+/* fix floating */
+
+.clearFix::after{
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+
+/*=====================================*/
+/* Header Section*/
+/*=====================================*/
+
+header {
+  /* background: linear-gradient(rgba(145, 90, 166, 0.9),rgba(135, 80, 156, 0.9)), url(img/hero-bg.jpg); */
+  background: rgba(0, 51, 102, 0.9);
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;    
+  text-align: center;
+  height: 45vh;
+  /* position: relative; */
+}
+
+.logo {
+  height: 4rem;
+  width: auto;
+  float: left;
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+
+/* Sticky Navigation */
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: .6rem 0.6rem;
+  background: rgba(0, 51, 102, 0.9);
+  box-shadow: 0 .2rem .5rem rgba(255,255,251,.9);
+  z-index: 9999;
+}
+
+.sticky .logo{
+  margin-top: 0;
+}
+
+.sticky .main-nav{
+  margin-top: .5rem;
+}
+
+.main-nav {
+  float: right;
+  margin-top: 4rem;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.main-nav li:first-child {
+  margin-left: 0rem;
+}
+
+.main-nav li a:visited, .main-nav li a:link {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none; 
+  padding: .2rem 1.4rem;
+  border-radius: .3rem;
+  display:inline-block;
+  background: #00224400;
+  transition: .3s;
+  /* font-size: 1.6rem; */
+}
+
+.main-nav li:hover a:visited, .main-nav li:hover a:link {
+  background: #002244;
+}
+
+.main-nav li.active a{
+  background: #002240;
+}
+
+.hero-text-box{
+  position:absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-20%);
+  text-align: center;
+  width: 114rem;
+}
+
+.btn-hero:link, 
+.btn-hero:visited {
+  background: #eb7d4b;
+  border-bottom: #c86a40;
+}
+
+
+section {
+  padding: 1.5rem;
+  padding-top: 5.2rem;
+  background: white;
+  margin: 1rem auto;
+  max-width: 960px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+ul {
+  padding-left: 1.5rem;
+}
+
+/* nav {
+  background: #002244;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+} */
+ 
+/*=====================================*/
+/* About Section*/
+/*=====================================*/
+
+.about-section{
+  background: linear-gradient(rgba(216, 224, 214, 0.9),rgba(216, 224, 214, 0.9)), url(img/about-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  /* text-align: center; */
+}
+
+.about-section h2{
+  color: #3c4761;
+}
+
+.about-section h3{
+  color: #3c4761;
+}
+
+.about-section h2:after{
+  background: #3c4761;
+}
+/*=====================================*/
+/* END About Section*/
+/*=====================================*/
+
+
+/*=====================================*/
+/* Dates Section*/
+/*=====================================*/
+
+.dates-section{
+  background: linear-gradient(rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.9)), url(img/dates-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  /* text-align: center; */
+}
+
+.dates-section h2{
+  color: #3c4761;
+}
+
+.dates-section h3{
+  color: #3c4761;
+}
+
+.dates-section h2:after{
+  background: #3c4761;
+}
+/*=====================================*/
+/* END Dates Section*/
+/*=====================================*/
+
+
+
+/*=====================================*/
+/* Competition Section*/
+/*=====================================*/
+
+.competition-section{
+  background: linear-gradient(rgba(213, 204, 217, 0.9),rgba(213, 204, 217, 0.9)), url(img/competition-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  /* text-align: center; */
+}
+
+.competition-section h2{
+  color: #3c4761;
+}
+
+.competition-section h3{
+  color: #3c4761;
+}
+
+.competition-section h2:after{
+  background: #3c4761;
+}
+/*=====================================*/
+/* END Competition Section*/
+/*=====================================*/
+
+
+
+
+
+/*=====================================*/
+/* Dataset Section*/
+/*=====================================*/
+
+.dataset-section{
+  /* background: linear-gradient(rgba(255, 221, 153, 0.9),rgba(255, 221, 153, 0.9)), url(img/dataset-bg.jpg); */
+  background: linear-gradient(rgba(231, 229, 222, 0.9),rgba(231, 229, 222, 0.9)), url(img/dataset-bg.jpg);
+  /* background: linear-gradient(rgba(235, 235, 230, 0.9),rgba(255, 221, 153, 0.9)), url(img/dataset-bg.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  /* text-align: center; */
+}
+
+.dataset-section h2{
+  color: #3c4761;
+}
+
+.dataset-section h2:after{
+  background: #3c4761;
+}
+
+
+.dataset-section h3{
+  color: #3c4761;
+}
+
+.dataset-section h4{
+  color: #3c4761;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.dataset-filter{
+  margin: 4.5rem 0;
+  text-align: center;
+}
+
+.dataset-filter button{
+  background: #ebc985;
+  /* font-size: 1.8rem; */
+  /* padding: 1rem 2rem; */
+  /* border: 0; */
+  /* border-radius: .3rem; */
+  text-transform: uppercase;
+  color: #3c4761;
+  margin: 0 .5rem;
+  transition: .5s;
+  /* outline: 0; */
+}
+
+.dataset-filter button:hover{
+  cursor: pointer;
+  box-shadow: inset 0 .3rem .5rem rgba(60, 71, 97, 0.5);
+}
+
+.dataset-image{
+  width: 100%;
+  height: 260px;       /* or any consistent value */
+  object-fit: contain;   /* or 'contain' if you want to preserve the image content without cropping */
+  /* border-radius: 4px; */
+  /* box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1); */
+  margin-bottom: 0rem;
+}
+
+.dataset-section .col:nth-child(3){
+  margin-left: 0;
+}
+
+.dataset-section .mixitup-control-active{
+  background: #fff;
+  /* background: #ebc985;   */
+}
+
+/*=====================================*/
+/* END Dataset Section*/
+/*=====================================*/
+
+
+/*=====================================*/
+/* Registration Section*/
+/*=====================================*/
+.registration-section{
+  background: linear-gradient(rgba(232, 224, 223, 0.9),rgba(232, 224, 223, 0.9)), url(img/registration-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.registration-section h2{
+  color: #3c4761;
+}
+
+.registration-section h3{
+  color: #3c4761;
+}
+
+.registration-section h2:after{
+  background: #3c4761;
+}
+
+
+.cta-button {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #3c4761;
+  border: 2px solid #3c4761;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: transparent;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #3c4761;
+  color: #fff;
+}
+
+/*=====================================*/
+/* END Registration Section*/
+/*=====================================*/
+
+
+/*=====================================*/
+/* Workshop Section*/
+/*=====================================*/
+
+.workshop-section{
+  background: linear-gradient(rgba(213, 214, 223, 0.9),rgba(213, 214, 223, 0.9)), url(img/workshop-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.workshop-section h2{
+  color: #3c4761;
+}
+
+.workshop-section h3{
+  color: #3c4761;
+}
+
+.workshop-section h2:after{
+  background: #3c4761;
+}
+
+
+/*=====================================*/
+/* END Workshop Section*/
+/*=====================================*/
+
+/*=====================================*/
+/* People Section*/
+/*=====================================*/
+
+.people-section{
+  background: linear-gradient(rgba(215, 234, 215, 0.95),rgba(215, 234, 215, 0.95)), url(img/people-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.people-section{
+  text-align: center;
+}
+.people-section h2{
+  color: #3c4761;
+}
+
+.people-section p{
+  font-size: 0.8rem;
+  /* color: #3c4761; */
+}
+
+.people-section h3{
+  color: #3c4761;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.people-section h2:after{
+  background: #3c4761;
+}
+
+.team-member{
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+}
+
+.role{
+  color: #30bae7;
+  text-transform: capitalize;
+  /* margin-top: 0.0rem; */
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.affiliation {
+  margin-top: 5px;
+}
+
+.affiliation-logo {
+  height: 48px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+/*=====================================*/
+/* END People Section*/
+/*=====================================*/
+
+
+.left-h3{
+  text-align: left; 
+  margin-left: 10%;
+}
+
+
+/*=====================================*/
+/* Footer Section*/
+/*=====================================*/
+
+.footer-section{
+  background: rgba(0, 51, 102, 0.9);
+  padding: 1rem 0;
+  text-align: center;
+  border-top: .1rem solid rgba(0, 51, 102, 0.9);
+}
+
+.footer-section p{
+  color: #fff;
+}
+
+.footer-section li{
+  display: inline-block;
+  margin: 0 2rem;
+}
+
+.footer-section li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.footer-section li:hover a{
+  color: #30bae7;
+}
+
+/* 
+footer {
+  background: #222;
+  color: #eee;
+  text-align: center;
+  padding: 1rem;
+} */

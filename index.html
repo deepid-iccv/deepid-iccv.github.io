@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <meta charset= "UTF-8">
+    <meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="description" content="DeepID ICCV 2025 Workshop & Competition on Detecting synthetic manipulations in ID documents">
+    <title>DeepID @ ICCV 2025</title>
+    <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.png">
+    <!-- Google Fonts ================================================== -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Font Awesome ================================================== -->
+    <script src="https://kit.fontawesome.com/e768f44d60.js" crossorigin="anonymous"></script><link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!--Vendors File ===================================================-->
+    <link rel="stylesheet" href="vendors/css/animated-circle.css">
+    <link rel="stylesheet" href="vendors/css/normalize.css">
+    <link rel="stylesheet" href="vendors/css/grid.css">
+    <!--Resource File ==================================================-->
+    <link rel= "stylesheet"  href= "resources/css/style.css"/>
+    <link rel="stylesheet" href="resources/css/responsive.css">
+</head>
+<body>
+
+    <!-- Started Header Menu -->
+    
+    <header id= "home">
+        <nav>
+            <div class="row">
+                <a href="#home">
+                    <img class="logo" src="resources/img/logo.png" alt="DeepID">
+                </a>
+                <ul class= "main-nav">
+                    <li class= "active" ><a href="#home">Home</a></li>
+                    <li><a href="#dates">Timeline</a></li>
+                    <li><a href="#competition">Competition</a></li>
+                    <li><a href="#dataset">Dataset</a></li>
+                    <li><a href="#participation">Participate</a></li>
+                    <li><a href="#leaderboard">Leaderboard</a></li>
+                    <li><a href="#workshop">Workshop</a></li>                                
+                    <li><a href="#organizers">Organizers</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="hero-text-box">
+                <h2>Detecting Synthetic Manipulations in ID Documents<br>(DeepID 2025) </h2>
+                <!-- <h2>(DeepID 2025)</h2> -->
+                <h3>Competition & Workshop   held in conjunction with IEEE/CVF ICCV 2025, Honolulu, Hawaii, USA.</h3>
+            </div>
+        </div>
+    </header>    
+    <!-- Ended Header Menu  -->
+   
+    <!--Started About Section-->
+    <section class="about-section  js-sticky-section" id="about">
+        <div class="row">
+            <h2>Overview</h2>
+        <p class= "little-description">
+            With the advancements and wide spread of visual generative models, ID document 
+            tampering has become a pressing issue.
+            DeepID is the first competition, that challenges participants to detect synthetic 
+            manipulations (i.e., injection attacks (not presentation attacks)) in ID documents. 
+            The results of the competition will be presented and discussed at the ICCV 2025 workshop of the same name.
+            The workshop also encourages submission of papers relevant to state-of-the-art methods, 
+            new datasets, and real-world use cases for ID document tampering generation and detection. 
+            The attendees interested in security, adversarial robustness, generative models, digital forensics, 
+            and policy implications will find this workshop highly relevant.
+        </p>
+            <p class= "subtitle-description">The focus of the competition is on:</p>
+            <ul class="timeline-list">
+                <li><strong>Detecting face-swapping manipulations</strong> when it was replaced using face swapping method in an ID document (card or passport).</li>
+                <li><strong>Detecting full or partial text inpainted</strong> inside a textual fields of an ID documents, such as, names and dates, using diffusion-based or other generative techniques.</li>
+                <li><strong>Performing automated visual forensics:</strong> binary classification and localization of forgeries in tampered ID documents.</li>
+                <li><strong>Considering practical deployment</strong> with hardware and software limitations in memory and computational resources for ID forgery detection systems.</li>
+            </ul>
+            <p class= "subtitle-description">The topics of interest for the DeepID workshop include:</p>
+            <ul class="timeline-list">
+                <li>Generation of fake ID documents.</li>
+                <li>Inserting manipulations in ID documents</li>
+                <li>Detection and localization of manipulations in ID Documents.</li>
+                <li>Using visual large models (VLMs) for manipulation detection and analysis.</li>
+                <li>Datasets pertaining to ID documents</li>
+                <li>Evaluation methodologies and metrics for ID documents manipulation detection.</li>
+                <li>Practical implications and considerations related to detecting manipulations in ID documents</li>
+            </ul>
+        </div>
+    </section>
+    <section id="dates" class="dates-section">
+        <div class="row">
+          <!-- <div class="section-header"> -->
+            <h2>Important Dates</h2>
+          <!-- </div> -->
+          <ul class="timeline-list">
+            <li><strong>Release of the ID card dataset and baseline code:</strong> May 23, 2025</li>
+            <li><strong>Open competition submission platform:</strong> May 30, 2025</li>
+            <li><strong>Close of the submission platform:</strong> July 14, 2025</li>
+            <li><strong>Workshop paper submission deadline:</strong> June 22, 2025</li>
+            <li><strong>Notification to Authors:</strong> June 28, 2025</li>
+            <li><strong>Camera-ready paper deadline:</strong> July 24, 2025</li>
+            <li><strong>Workshop:</strong> October 2025 (exact date TBD)</li>
+          </ul>
+        </div>
+    </section>
+    <!--Ended About Section-->
+
+
+    <!-- Started Competition here-->
+    <section class="competition-section" id= "competition">
+        <div class="row">
+            <h2>Competition Details</h2>
+            <p class= "little-description">Two tracks for detecting Digital Manipulations in ID Documents</p>
+        </div>
+        <div class="row">
+            <div class="col span_2_of_4 box">
+                <h3>Track 1</h3>
+                <p>Binary classification (bona fide vs. forged). For a given image of ID card, 
+                    submitted models return one score: nearer to 1 means it is a bona fide card 
+                    and nearer to 0, it is a manipulated card.</p>
+            </div>
+            <div class="col span_2_of_4 box">
+                <h3>Track 2</h3>
+                <p>Localization (mask of manipulated regions). For a given image of ID card, 
+                    submitted models return a binary mask of the same size as an image: with values at 0 for 
+                    manipulated regions and values at 1 for bona fide regions.</p>
+            </div>
+            <!-- <div class="col span_4_of_4 box"> -->
+                <h3 class="left-h3">Evaluation</h3>
+                <p class="left-description">Participants need to submit Docker containers with pre-trained models. 
+                    The baseline model with a baseline Docker code will be provided on May 30.
+                    Evaluation will be performed offline on a standalone GPU machine (RTX3090) with no internet connection on a private <a href="#dataset">dataset</a>. 
+                    For each track, the results of evaluations on the private dataset will be updated regularly in the <a href="#leaderboard">leaderboard</a>.</p>
+            <!-- </div>
+            <div class="col span_4_of_4 box"> -->
+                <!-- <h3 class="left-h3">Evaluation environment</h3>
+                <p class="left-description"> A stand-alone (no internet connection) machine with RTX3090 GPU and pre-installed environment, 
+                    which will be used to evaluate the submitted docker contrainers.</p> -->
+            <!-- </div> -->
+        </div>
+
+    </section>
+    <!--Ended Competition Section-->
+
+    <!-- Dataset here-->
+
+    <section class="dataset-section" id="dataset">
+        <div class="row">
+            <h2>Dataset</h2>
+            <p class="left-description">We provide participants with 
+                the Fantasy ID Dataset for tuning or training their detection and localization models.
+            The download link to the dataset will be provided upon registration.</p>
+        </div>
+        <div class="row">
+            <!-- <div class="col span_3_of_4"> -->
+                <h3 class="left-h3">Fantasy ID Dataset (for training/tuning)</h3>
+                
+                <p class="left-description"> We provide 262 fantasy ID cards designed to resemble ID documents of 
+                    10 different countries and languages. 
+                    The cards were printed using Evolis Primacy 2 card printer and scanned with three devices (iPhone 15 Pro, Huawei Mate 30, 
+                    and Kyocera TASKalfa 2554ci office scanner), resulting in 786 images. 
+                    These constitute bona fide samples. Manipulated versions were generated from bona 
+                    fide using 2 face swapping methods and 2 text inpainting methods (by changing some fields such as name, date, id number, etc). 
+                    In the dataset, one type of attack has one method for face swapping and one method for text inpainting.
+                    The manipulated images were again printed with card printer and scanned with the same three devices. In the end,
+                    there are 786*2*3=4716 manipulated samples. 
+                </p>
+            <!-- </div>
+            <div class="col span_3_of_4"> -->
+                <h3 class="left-h3">Private test dataset (hidden testing)</h3>
+                <p class="left-description">A private undisclosed set of bona fide (10K of ID documents) 
+                    from real individuals, provided by the ID verification company (PXL Vision) 
+                    and their forged versions (also 10K). This data will be used 
+                    for final evaluation and no samples will be released. 
+                    The <a href="#leaderboard">Leaderboard</a> with the 
+                    evaluation results on these 10K samples will be updated every day during the competition. </p>
+            <!-- </div> -->
+        </div>
+        <div class="row">
+            <div class="dataset-filter">
+                <p class="little-description">Here are some examples of Fantasy ID cards with original generated cards, 
+                    printed and scanned bona fide, and manipulated then printed and re-scanned forged versions. 
+                    The participants will need to detect manipulated/forged IDs either as a classification task (is it manipulated) 
+                    or as a localization task (at which places it is manipulated).</p>
+                <button type="button" data-filter="all">All</button>
+                <button type="button" data-filter=".orig">Original templates</button>
+                <button type="button" data-filter=".bonafid">Bona fide ID cards</button>
+                <button type="button" data-filter=".forged">Forged ID cards</button>
+            </div>
+        </div>
+        <div class="row container">
+            <div class="col span_1_of_2 mix orig box"  style="margin-left: 0%">
+                <img src="images/cards/portugal-066_03.png" alt="Original Portugal" class="dataset-image">
+                <h4>Original Portugal</h4>
+            </div>
+            <div class="col span_1_of_2 mix bonafid box">
+                <img src="images/cards/portugal-066_03-bonafide.png" alt="Bonafide Portugal" class="dataset-image">
+                <h4>Bonafide Portugal</h4>
+            </div>
+            <div class="col span_1_of_2 mix forged box">
+                <img src="images/cards/portugal-066_03-bbx-forged.png" alt="Forged Portugal" class="dataset-image">
+                <h4>Forged Portugal</h4>
+            </div>
+            <div class="col span_1_of_2 mix orig box">
+                <img src="images/cards/turkiye-NF-1054.png" alt="Original Turkiye" class="dataset-image">
+                <h4>Original Turkiye</h4>
+            </div>
+            <div class="col span_1_of_2 mix bonafid box"  style="margin-left: 0%">
+                <img src="images/cards/turkiye-NF-1054-bonafide.png" alt="Bonafide Turkiye" class="dataset-image">
+                <h4>Bonafide Turkiye</h4>
+            </div>
+            <div class="col span_1_of_2 mix forged box">
+                <img src="images/cards/turkiye-NF-1054-bbx-forged.png" alt="Forged Turkiye" class="dataset-image">
+                <h4>Forged Turkiye</h4>
+            </div>
+        </div>
+        <!--  Hidden load more projects
+        <div class="row">
+            <a href="#" class="btn btn-load-more">load more projects</a>
+        </div> -->
+    </section>
+
+    <!-- Ended Portfolio Section here-->
+    
+
+    <!--Started Registration Section -->
+    <section class="registration-section" id="participation">
+        <div class="row">
+            <h2>Register to Participate</h2>
+            <p class="little-description">To participate in the competition, please fill out the registration form</p>
+            <p class="little-description">
+                <a href="https://forms.gle/your-form-link" target="_blank" class="cta-button">Register Here</a>
+              </p>                          
+            <!-- <p class="little-description"><a href="https://forms.gle/your-form-link" target="_blank">Register Here</a></p> -->
+        </div>
+    </section>
+    <section class="registration-section" id="leaderboard">
+        <div class="row">
+            <h2>Leaderboard</h2>
+            <p class="little-description">Evaluation results will be posted here regularly during the competition.</p>
+            <p class="little-description">
+                <a href="#leaderboard" class="cta-button">Coming soon: Live leaderboard with top submissions</a>
+              </p>            
+            <!-- <p class="little-description"><i><strong> Coming soon: Live leaderboard with top submissions.</strong></i></p> -->
+        </div>
+    </section>
+    <!--Ended Registration Section-->
+    
+    <section class="workshop-section" id= "workshop">
+        <div class="row">
+            <h2>Workshop details</h2>
+            <ul class="bullet-list">
+                <li>We invite two types of submissions: </li>
+                <ul class="bullet-list">
+
+                    <li>Long archival papers should be between 4 and 8 pages, including figures and tables, in the ICCV style. Additional pages containing only cited references are allowed. A long paper will be published in the ICCV 2025 workshop proceedings.</li>
+                
+                
+                    <li>Short non-archival papers (not exceeding 4 pages). The short paper is intended for sharing original early stages ideas, promising research or applications, pilot studies, work in progress, or new datasets.  Accepted short papers will not be included in the ICCV 2025 workshop proceedings. Authors of accepted short papers are encouraged to make their submissions available on arXiv or similar open-access platforms. </li>
+                
+                
+                    <li>Supplementary material submission: The authors may optionally submit additional material that could not be included due to constraints of format or space. The authors should refer to the contents of the supplementary material appropriately in the paper. Reviewers will be encouraged to look at it, but are not obligated to do so. </li>
+                </ul>
+                
+                <li>Reviewing is double blind and there is no rebuttal period. Authors are expected to remove their names and affiliations in the submitted version. Authors should also make a reasonable effort to anonymize the submitted code, data, and manuscript. If the paper is accepted, authors are expected to replace the submitted code/dataset with a non-anonymized version or link to a public GitHub repository.</li>
+                
+                <li>Paper submissions must adhere to the ICCV 2025 author guidelines regarding style, format, and length restrictions. By submitting a manuscript to the workshop, the authors acknowledge that it has not been previously published or accepted for publication in substantially similar form in any peer-reviewed venue including journal, conference or workshop.</li>
+                
+                
+                <li>Submissions must be made via the Microsoft CMT platform:: <a href="#workshop">https://cmt3.research.microsoft.com/DEEPID2025</a>  </li>
+                                
+                <li>Upon acceptance, each paper must be covered by a full, in-person author registration. One registration may cover up to three papers inclusive of main conference or workshop papers. Virtual registrations will not cover a paper submission - even workshop papers. Registration details can be found here.</li>
+                
+                <li>Note that everyone must be registered in advance to attend the workshop (even speakers).</li>
+            </ul>
+            <h3>Workshop schedule: TBD</h3>
+        </div>
+    </section>
+    <section class="people-section" id= "workshop"">
+            <div class="row">
+            <h2>Keynote Speakers</h2>
+        </div>
+        <div class="row">
+            <div class="col span_2_of_4 box">
+                <a href="https://www.grip.unina.it/members/verdoliva" target="_blank"><img alt=">Luisa Verdoliva" src="images/people/luisa_verdoliva.jpg" class="team-member"></a>
+                <h3>Prof. Luisa Verdoliva</h3>
+                <span class="role">University Federico II of Naples</span>
+                <p>Digital forensics and deepfake detection</p>
+                <div class="affiliation">
+                    <a href="https://www.grip.unina.it/" target="_blank">
+                      <img src="images/uni_napoli_512px.png" alt="University Federico II of Naples logo" class="affiliation-logo">
+                    </a>
+                  </div>
+                  <!-- <p><a href="https://www.grip.unina.it/members/verdoliva" target="_blank">Personal Page</a></p> -->
+            </div>
+            <div class="col span_2_of_4 box">
+                <a href="https://dasec.h-da.de/staff/juan-tapia/" target="_blank"><img alt="Juan Tapia" src="images/people/juan_tapia.jpg" class="team-member"></a>
+                <h3>Dr. Juan Tapia</h3>
+                <span class="role">ATHENE National Research Center</span>
+                <p>Presentation/morphing attack detection</p>
+                <div class="affiliation">
+                    <a href="https://dasec.h-da.de/" target="_blank">
+                      <img src="images/athene-logo.png" alt="ATHENE National Research Center" class="affiliation-logo">
+                    </a>
+                </div>
+                <!-- <p><a href="https://dasec.h-da.de/staff/juan-tapia/" target="_blank">Personal page</a></p>                     -->
+            </div>            
+        </div>
+    </section>
+
+        
+    <!-- Started Organizers here-->
+    <section class="people-section" id= "organizers">
+        <div class="row">
+            <h2>Organizers</h2>
+        </div>
+    <div class="container">
+            <!-- <div class="section-header">
+            <h3>Organizers</h3>
+            </div> -->
+            <div class="row">
+                <div class="col span_1_of_4 box">
+                    <a href="https://www.idiap.ch/~korshunov/" target="_blank"><img alt="Pavel Korshunov" src="images/people/pavel_korshunov.jpg" class="team-member"></a>
+                    <h3>Pavel Korshunov</h3>
+                    <span class="role">Idiap Research Institute</span>
+                    <p>Forged ID generation and detection</p>
+                    <div class="affiliation">
+                        <a href="https://www.idiap.ch/en" target="_blank">
+                          <img src="images/idiap-logo.png" alt="Idiap logo" class="affiliation-logo">
+                        </a>
+                      </div>
+                      <!-- <p><a href="https://www.idiap.ch/~korshunov/" target="_blank">Personal Page</a></p> -->
+                </div>
+                <div class="col span_1_of_4 box">
+                    <a href="https://www.linkedin.com/in/nevenashamoska/" target="_blank"><img alt="Nevena Shamoska" src="images/people/nevena_shamoska.jpg" class="team-member"></a>
+                    <h3>Nevena Shamoska</h3>
+                    <span class="role">CTO, PXL Vision</span>
+                    <p>Identity verification systems</p>
+                    <div class="affiliation">
+                        <a href="https://www.pxl-vision.com/" target="_blank">
+                          <img src="images/pxlvision-logo.png" alt="PXL Vision logo" class="affiliation-logo">
+                        </a>
+                    </div>
+                    <!-- <p><a href="https://www.linkedin.com/in/nevenashamoska/" target="_blank">LinkedIn page</a></p>                     -->
+                </div>
+                <div class="col span_1_of_4 box">
+                    <a href="https://www.linkedin.com/in/magdalena-polac/" target="_blank"><img alt="Magda Połlać" src="images/people/magda_pollac.jpg" class="team-member"></a>
+                    <h3>Magda Połlać</h3>
+                    <span class="role">PXL Vision</span>
+                    <p>ID document verification</p>
+                    <div class="affiliation">
+                        <a href="https://www.pxl-vision.com/" target="_blank">
+                          <img src="images/pxlvision-logo.png" alt="PXL Vision logo" class="affiliation-logo">
+                        </a>
+                    </div>
+                    <!-- <p><a href="https://www.linkedin.com/in/magdalena-polac/" target="_blank">LinkedIn page</a></p> -->
+                </div>
+                <div class="col span_1_of_4 box" >
+                    <a href="https://www.idiap.ch/~vkrivokuca/" target="_blank"><img alt="Vedrana Krivokuca" src="images/people/vedrana_krivokuca.jpg" class="team-member"></a>
+                    <h3>Vedrana Krivokuca</h3>
+                    <span class="role">Idiap Research Institute</span>
+                    <p>Biometric security</p>
+                    <div class="affiliation">
+                        <a href="https://www.idiap.ch/en" target="_blank">
+                          <img src="images/idiap-logo.png" alt="Idiap logo" class="affiliation-logo">
+                        </a>
+                    </div>
+                    <!-- <p><a href="https://www.idiap.ch/~vkrivokuca/" target="_blank">Personal Page</a></p> -->
+                </div>
+                <div class="col span_1_of_4 box">
+                    <a href="https://www.idiap.ch/~vvidit/" target="_blank"><img alt="Vidit Vidit" src="images/people/vidit_vidit.jpg" class="team-member"></a>
+                    <h3>Vidit Vidit</h3>
+                    <span class="role">Idiap Research Institute</span>
+                    <p>Text inpainting detection</p>
+                    <div class="affiliation">
+                        <a href="https://www.idiap.ch/en" target="_blank">
+                          <img src="images/idiap-logo.png" alt="Idiap logo" class="affiliation-logo">
+                        </a>
+                    </div>
+                    <!-- <p><a href="https://www.idiap.ch/~vvidit/" target="_blank">Personal Page</a></p> -->
+                </div>
+                <div class="col span_1_of_4 box">
+                    <a href="https://www.idiap.ch/~amohammadi/" target="_blank"><img alt="Amir Mohammadi" src="images/people/amir_mohammadi.jpg" class="team-member"></a>
+                    <h3>Amir Mohammadi</h3>
+                    <span class="role">Idiap Research Institute</span>
+                    <p>Deepfakes generation and detection</p>
+                    <div class="affiliation">
+                        <a href="https://www.idiap.ch/en" target="_blank">
+                          <img src="images/idiap-logo.png" alt="Idiap logo" class="affiliation-logo">
+                        </a>
+                    </div>
+                    <!-- <p><a href="https://www.idiap.ch/~amohammadi/" target="_blank">Personal Page</a></p> -->
+                </div>
+                <div class="col span_1_of_4 box"  style="margin-right: 0%">
+                    <a href="https://www.idiap.ch/~cecabert/" target="_blank"><img alt="Christophe Ecabert" src="images/people/christophe_ecabert.jpg" class="team-member"></a>
+                    <h3>Christophe Ecabert</h3>
+                    <span class="role">Idiap Research Institute</span>
+                    <p>Benchmarking detection models</p>
+                    <div class="affiliation">
+                        <a href="https://www.idiap.ch/en" target="_blank">
+                          <img src="images/idiap-logo.png" alt="Idiap logo" class="affiliation-logo">
+                        </a>
+                    </div>
+                    <!-- <p><a href="https://www.idiap.ch/~cecabert/" target="_blank">Personal Page</a></p> -->
+                </div>
+                <div class="col span_1_of_4 box" style="margin-left: 0%">
+                    <a href="https://www.idiap.ch/~marcel/" target="_blank"><img alt="Sébastien Marcel" src="images/people/sebastien_marcel.jpg" class="team-member"></a>
+                    <h3>Sébastien Marcel</h3>
+                    <span class="role">Idiap Research Institute</span>
+                    <p>Biometrics privacy and security</p>
+                    <div class="affiliation">
+                        <a href="https://www.idiap.ch/en" target="_blank">
+                          <img src="images/idiap-logo.png" alt="Idiap logo" class="affiliation-logo">
+                        </a>
+                    </div>
+                    <!-- <p><a href="https://www.idiap.ch/~marcel/" target="_blank">Personal Page</a></p> -->
+                </div>
+        </div>
+    </section>
+
+    <!-- End Organizers here-->
+
+    <!-- Ended Footer Section here-->
+
+        <footer class="footer-section">
+            <!-- <div class="row"> -->
+                <!-- <h2>For any questions please contact</h2> -->
+            <p class="little-description">For any questions please contact: pavel.korshunov@idiap.ch | DeepID 2025 <br> The webpage template was modified from 
+                the <a href="https://github.com/alsiam/web-projects/tree/main/cuda-portfolio" style="color: #fff">Cuda Portfolio @web-projects</a> </p>
+            <div class="row">
+                <ul>
+                    <li><a href="#">GitLab Baseline</a></li>
+                    <li><a href="#">Registration</a></li>
+                    <li><a href="#">Leaderboard</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    <!-- Ended Footer Section here-->
+
+<!--JavaScript Vendors File ===========================================-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="vendors/js/jquery.waypoints.min.js"></script>
+<script src= "vendors/js/animated-circle.js"></script>
+<script src="vendors/js/html5shiv.min.js"></script>
+<script src="vendors/js/respond.min.js"></script>
+<script src="vendors/js/selectivizr-min.js"></script>
+<script src="vendors/js/mixitup.min.js"></script>
+<script src= "resources/js/main.js"></script>
+</body>
+</html>
