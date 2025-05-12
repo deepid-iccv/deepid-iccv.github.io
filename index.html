@@ -58,22 +58,22 @@
         <p class= "little-description">
             With the advancements and wide spread of visual generative models, ID document 
             tampering has become a pressing issue.
-            DeepID is the first competition, that challenges participants to detect synthetic 
+            DeepID is the first competition and workshop, that challenges participants to detect synthetic 
             manipulations (i.e., injection attacks (not presentation attacks)) in ID documents. 
             The results of the competition will be presented and discussed at the ICCV 2025 workshop of the same name.
-            The workshop also encourages submission of papers relevant to state-of-the-art methods, 
+            The workshop also encourages submission of <strong>papers relevant to state-of-the-art methods</strong>, 
             new datasets, and real-world use cases for ID document tampering generation and detection. 
             The attendees interested in security, adversarial robustness, generative models, digital forensics, 
             and policy implications will find this workshop highly relevant.
         </p>
-            <p class= "subtitle-description">The focus of the competition is on:</p>
+            <h3>The focus of the competition is on:</h3>
             <ul class="timeline-list">
                 <li><strong>Detecting face-swapping manipulations</strong> when it was replaced using face swapping method in an ID document (card or passport).</li>
                 <li><strong>Detecting full or partial text inpainted</strong> inside a textual fields of an ID documents, such as, names and dates, using diffusion-based or other generative techniques.</li>
                 <li><strong>Performing automated visual forensics:</strong> binary classification and localization of forgeries in tampered ID documents.</li>
                 <li><strong>Considering practical deployment</strong> with hardware and software limitations in memory and computational resources for ID forgery detection systems.</li>
             </ul>
-            <p class= "subtitle-description">The topics of interest for the DeepID workshop include:</p>
+            <h3>The topics of interest for the DeepID workshop include:</h3>
             <ul class="timeline-list">
                 <li>Generation of fake ID documents.</li>
                 <li>Inserting manipulations in ID documents</li>
@@ -90,10 +90,17 @@
           <!-- <div class="section-header"> -->
             <h2>Important Dates</h2>
           <!-- </div> -->
+           <h3>Competition:</h3>
           <ul class="timeline-list">
             <li><strong>Release of the ID card dataset and baseline code:</strong> May 23, 2025</li>
             <li><strong>Open competition submission platform:</strong> May 30, 2025</li>
             <li><strong>Close of the submission platform:</strong> July 14, 2025</li>
+            <li><strong>Final evaluation results:</strong> July 15, 2025</li>
+          </ul>
+          <h3>Workshop:</h3>
+          <ul class="timeline-list">
+          <ul>
+            <li><strong>Workshop CMT submission open:</strong> May 30, 2025</li>
             <li><strong>Workshop paper submission deadline:</strong> June 22, 2025</li>
             <li><strong>Notification to Authors:</strong> June 28, 2025</li>
             <li><strong>Camera-ready paper deadline:</strong> July 24, 2025</li>
@@ -146,7 +153,11 @@
         <div class="row">
             <h2>Dataset</h2>
             <p class="left-description">We provide participants with 
-                the Fantasy ID Dataset for tuning or training their detection and localization models.
+                the Fantasy ID Dataset for tuning or training their detection and localization models. 
+                They can use any other public, such 
+                as <a href="http://l3i-share.univ-lr.fr/MIDV2020/midv2020.html" target="_blank">MIDV-2020</a> 
+                or <a href="https://github.com/ricardobnjunior/Brazilian-Identity-Document-Dataset" target="_blank">BID</a> 
+                datasets, and private datasets of ID documents for training/tuning their submitted models.
             The download link to the dataset will be provided upon registration.</p>
         </div>
         <div class="row">
@@ -160,8 +171,9 @@
                     These constitute bona fide samples. Manipulated versions were generated from bona 
                     fide using 2 face swapping methods and 2 text inpainting methods (by changing some fields such as name, date, id number, etc). 
                     In the dataset, one type of attack has one method for face swapping and one method for text inpainting.
-                    The manipulated images were again printed with card printer and scanned with the same three devices. In the end,
-                    there are 786*2*3=4716 manipulated samples. 
+                    <!-- The manipulated images were again printed with card printer and scanned with the same three devices.  -->
+                    In the end,
+                    there are 786*2=1572 manipulated samples. 
                 </p>
             <!-- </div>
             <div class="col span_3_of_4"> -->
@@ -265,9 +277,9 @@
                 <li>Paper submissions must adhere to the ICCV 2025 author guidelines regarding style, format, and length restrictions. By submitting a manuscript to the workshop, the authors acknowledge that it has not been previously published or accepted for publication in substantially similar form in any peer-reviewed venue including journal, conference or workshop.</li>
                 
                 
-                <li>Submissions must be made via the Microsoft CMT platform:: <a href="#workshop">https://cmt3.research.microsoft.com/DEEPID2025</a>  </li>
+                <li>Submissions must be made via the Microsoft CMT platform:: <a href="#workshop"  target="_blank">https://cmt3.research.microsoft.com/DEEPID2025</a>  </li>
                                 
-                <li>Upon acceptance, each paper must be covered by a full, in-person author registration. One registration may cover up to three papers inclusive of main conference or workshop papers. Virtual registrations will not cover a paper submission - even workshop papers. Registration details can be found here.</li>
+                <li>Upon acceptance, each paper must be covered by a full, in-person author registration. One registration may cover up to three papers inclusive of main conference or workshop papers. Virtual registrations will not cover a paper submission - even workshop papers. Registration details can be found <a href="https://iccv.thecvf.com/Conferences/2025/Pricing2">here</a>.</li>
                 
                 <li>Note that everyone must be registered in advance to attend the workshop (even speakers).</li>
             </ul>
@@ -321,7 +333,7 @@
                     <a href="https://www.idiap.ch/~korshunov/" target="_blank"><img alt="Pavel Korshunov" src="images/people/pavel_korshunov.jpg" class="team-member"></a>
                     <h3>Pavel Korshunov</h3>
                     <span class="role">Idiap Research Institute</span>
-                    <p>Forged ID generation and detection</p>
+                    <!-- <p>Forged ID generation and detection</p> -->
                     <div class="affiliation">
                         <a href="https://www.idiap.ch/en" target="_blank">
                           <img src="images/idiap-logo-small.png" alt="Idiap logo" class="affiliation-logo">
@@ -333,7 +345,7 @@
                     <a href="https://www.linkedin.com/in/nevenashamoska/" target="_blank"><img alt="Nevena Shamoska" src="images/people/nevena_shamoska.jpg" class="team-member"></a>
                     <h3>Nevena Shamoska</h3>
                     <span class="role">CTO, PXL Vision</span>
-                    <p>Identity verification systems</p>
+                    <!-- <p>Identity verification systems</p> -->
                     <div class="affiliation">
                         <a href="https://www.pxl-vision.com/" target="_blank">
                           <img src="images/pxlvision-logo.png" alt="PXL Vision logo" class="affiliation-logo">
@@ -345,7 +357,7 @@
                     <a href="https://www.linkedin.com/in/magdalena-polac/" target="_blank"><img alt="Magda Połlać" src="images/people/magda_pollac.jpg" class="team-member"></a>
                     <h3>Magda Połlać</h3>
                     <span class="role">PXL Vision</span>
-                    <p>ID document verification</p>
+                    <!-- <p>ID document verification</p> -->
                     <div class="affiliation">
                         <a href="https://www.pxl-vision.com/" target="_blank">
                           <img src="images/pxlvision-logo.png" alt="PXL Vision logo" class="affiliation-logo">
@@ -357,7 +369,7 @@
                     <a href="https://www.idiap.ch/~vkrivokuca/" target="_blank"><img alt="Vedrana Krivokuca" src="images/people/vedrana_krivokuca.jpg" class="team-member"></a>
                     <h3>Vedrana Krivokuca</h3>
                     <span class="role">Idiap Research Institute</span>
-                    <p>Biometric security</p>
+                    <!-- <p>Biometric security</p> -->
                     <div class="affiliation">
                         <a href="https://www.idiap.ch/en" target="_blank">
                           <img src="images/idiap-logo-small.png" alt="Idiap logo" class="affiliation-logo">
@@ -367,9 +379,9 @@
                 </div>
                 <div class="col span_1_of_4 box"  style="margin-left: 0%">
                     <a href="https://www.idiap.ch/~vvidit/" target="_blank"><img alt="Vidit Vidit" src="images/people/vidit_vidit.jpg" class="team-member"></a>
-                    <h3>Vidit Vidit</h3>
+                    <h3>Vidit</h3>
                     <span class="role">Idiap Research Institute</span>
-                    <p>Text inpainting detection</p>
+                    <!-- <p>Text inpainting detection</p> -->
                     <div class="affiliation">
                         <a href="https://www.idiap.ch/en" target="_blank">
                           <img src="images/idiap-logo-small.png" alt="Idiap logo" class="affiliation-logo">
@@ -381,7 +393,7 @@
                     <a href="https://www.idiap.ch/~amohammadi/" target="_blank"><img alt="Amir Mohammadi" src="images/people/amir_mohammadi.jpg" class="team-member"></a>
                     <h3>Amir Mohammadi</h3>
                     <span class="role">Idiap Research Institute</span>
-                    <p>Deepfakes generation and detection</p>
+                    <!-- <p>Deepfakes generation and detection</p> -->
                     <div class="affiliation">
                         <a href="https://www.idiap.ch/en" target="_blank">
                           <img src="images/idiap-logo-small.png" alt="Idiap logo" class="affiliation-logo">
@@ -393,7 +405,7 @@
                     <a href="https://www.idiap.ch/~cecabert/" target="_blank"><img alt="Christophe Ecabert" src="images/people/christophe_ecabert.jpg" class="team-member"></a>
                     <h3>Christophe Ecabert</h3>
                     <span class="role">Idiap Research Institute</span>
-                    <p>Benchmarking detection models</p>
+                    <!-- <p>Benchmarking detection models</p> -->
                     <div class="affiliation">
                         <a href="https://www.idiap.ch/en" target="_blank">
                           <img src="images/idiap-logo-small.png" alt="Idiap logo" class="affiliation-logo">
@@ -405,7 +417,7 @@
                     <a href="https://www.idiap.ch/~marcel/" target="_blank"><img alt="Sébastien Marcel" src="images/people/sebastien_marcel.jpg" class="team-member"></a>
                     <h3>Sébastien Marcel</h3>
                     <span class="role">Idiap Research Institute</span>
-                    <p>Biometrics privacy and security</p>
+                    <!-- <p>Biometrics privacy and security</p> -->
                     <div class="affiliation">
                         <a href="https://www.idiap.ch/en" target="_blank">
                           <img src="images/idiap-logo-small.png" alt="Idiap logo" class="affiliation-logo">

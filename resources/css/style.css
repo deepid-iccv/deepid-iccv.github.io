@@ -60,8 +60,8 @@ h2::after{
 /*=====================================*/
 
 header {
-  /* background: linear-gradient(rgba(145, 90, 166, 0.9),rgba(135, 80, 156, 0.9)), url(img/hero-bg.jpg); */
-  background: rgba(0, 51, 102, 0.9);
+  /* background: linear-gradient(rgba(145, 90, 166, 0.95),rgba(135, 80, 156, 0.95)), url(img/hero-bg.jpg); */
+  background: rgba(0, 51, 102, 0.95);
   color: white;
   background-repeat: no-repeat;
   background-size: cover;
@@ -87,7 +87,7 @@ header {
   left: 0;
   width: 100%;
   padding: .6rem 0.6rem;
-  background: rgba(0, 51, 102, 0.9);
+  background: rgba(0, 51, 102, 0.95);
   box-shadow: 0 .2rem .5rem rgba(255,255,251,.9);
   z-index: 9999;
 }
@@ -196,7 +196,7 @@ nav ul li a:hover {
 /*=====================================*/
 
 .about-section{
-  background: linear-gradient(rgba(216, 224, 214, 0.9),rgba(216, 224, 214, 0.9)), url(img/about-bg.jpg);
+  background: linear-gradient(rgba(216, 224, 214, 0.95),rgba(216, 224, 214, 0.95)), url(img/about-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -225,7 +225,7 @@ nav ul li a:hover {
 /*=====================================*/
 
 .dates-section{
-  background: linear-gradient(rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.9)), url(img/dates-bg.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.95),rgba(255, 255, 255, 0.95)), url(img/dates-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -255,7 +255,7 @@ nav ul li a:hover {
 /*=====================================*/
 
 .competition-section{
-  background: linear-gradient(rgba(213, 204, 217, 0.9),rgba(213, 204, 217, 0.9)), url(img/competition-bg.jpg);
+  background: linear-gradient(rgba(213, 204, 217, 0.95),rgba(213, 204, 217, 0.95)), url(img/competition-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -287,9 +287,9 @@ nav ul li a:hover {
 /*=====================================*/
 
 .dataset-section{
-  /* background: linear-gradient(rgba(255, 221, 153, 0.9),rgba(255, 221, 153, 0.9)), url(img/dataset-bg.jpg); */
-  background: linear-gradient(rgba(231, 229, 222, 0.9),rgba(231, 229, 222, 0.9)), url(img/dataset-bg.jpg);
-  /* background: linear-gradient(rgba(235, 235, 230, 0.9),rgba(255, 221, 153, 0.9)), url(img/dataset-bg.jpg); */
+  /* background: linear-gradient(rgba(255, 221, 153, 0.95),rgba(255, 221, 153, 0.95)), url(img/dataset-bg.jpg); */
+  background: linear-gradient(rgba(231, 229, 222, 0.95),rgba(231, 229, 222, 0.95)), url(img/dataset-bg.jpg);
+  /* background: linear-gradient(rgba(235, 235, 230, 0.95),rgba(255, 221, 153, 0.95)), url(img/dataset-bg.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -366,7 +366,7 @@ nav ul li a:hover {
 /* Registration Section*/
 /*=====================================*/
 .registration-section{
-  background: linear-gradient(rgba(232, 224, 223, 0.9),rgba(232, 224, 223, 0.9)), url(img/registration-bg.jpg);
+  background: linear-gradient(rgba(232, 224, 223, 0.95),rgba(232, 224, 223, 0.95)), url(img/registration-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -414,7 +414,7 @@ nav ul li a:hover {
 /*=====================================*/
 
 .workshop-section{
-  background: linear-gradient(rgba(213, 214, 223, 0.9),rgba(213, 214, 223, 0.9)), url(img/workshop-bg.jpg);
+  background: linear-gradient(rgba(213, 214, 223, 0.95),rgba(213, 214, 223, 0.95)), url(img/workshop-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -516,10 +516,10 @@ nav ul li a:hover {
 /*=====================================*/
 
 .footer-section{
-  background: rgba(0, 51, 102, 0.9);
+  background: rgba(0, 51, 102, 0.95);
   padding: 1rem 0;
   text-align: center;
-  border-top: .1rem solid rgba(0, 51, 102, 0.9);
+  border-top: .1rem solid rgba(0, 51, 102, 0.95);
 }
 
 .footer-section p{
