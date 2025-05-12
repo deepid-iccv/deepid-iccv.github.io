@@ -420,6 +420,9 @@ nav ul li a:hover {
   background-attachment: fixed;
   background-position: center center;
 }
+.workshop-section{
+  text-align: center;
+}
 
 .workshop-section h2{
   color: #3c4761;
@@ -427,10 +430,15 @@ nav ul li a:hover {
 
 .workshop-section h3{
   color: #3c4761;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 
 .workshop-section h2:after{
   background: #3c4761;
+}
+.workshop-section .leftp{
+  text-align: left;
 }
 
 

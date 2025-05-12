@@ -4,7 +4,7 @@
     <meta charset= "UTF-8">
     <meta name= "viewport" content= "width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE-Edge">
-    <meta name="description" content="DeepID ICCV 2025 Workshop & Competition on Detecting synthetic manipulations in ID documents">
+    <meta name="description" content="DeepID ICCV 2025 Challenge on Detecting synthetic manipulations in ID documents">
     <title>DeepID @ ICCV 2025</title>
     <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.png">
     <!-- Google Fonts ================================================== -->
@@ -43,9 +43,9 @@
         </nav>
         <div class="row">
             <div class="hero-text-box">
-                <h2>Detecting Synthetic Manipulations in ID Documents<br>(DeepID 2025) </h2>
+                <h2>The Challenge of Detecting Synthetic Manipulations in ID Documents<br>(DeepID 2025) </h2>
                 <!-- <h2>(DeepID 2025)</h2> -->
-                <h3>Competition & Workshop   held in conjunction with IEEE/CVF ICCV 2025, Honolulu, Hawaii, USA.</h3>
+                <h3>Challenge is  held in conjunction with IEEE/CVF ICCV, Honolulu, Hawaii, USA on October 2025.</h3>
             </div>
         </div>
     </header>    
@@ -58,13 +58,16 @@
         <p class= "little-description">
             With the advancements and wide spread of visual generative models, ID document 
             tampering has become a pressing issue.
-            DeepID is the first competition and workshop, that challenges participants to detect synthetic 
+            DeepID is the first competition that challenges participants to detect synthetic 
             manipulations (i.e., injection attacks (not presentation attacks)) in ID documents. 
             The results of the competition will be presented and discussed at the ICCV 2025 workshop of the same name.
-            The workshop also encourages submission of <strong>papers relevant to state-of-the-art methods</strong>, 
-            new datasets, and real-world use cases for ID document tampering generation and detection. 
-            The attendees interested in security, adversarial robustness, generative models, digital forensics, 
-            and policy implications will find this workshop highly relevant.
+            The top perfoming teams in the challenge will be <strong>invited to be co-authors of the overview competition paper</strong>, 
+            which will be published in the ICCV proceedings, and will be asked to 
+            present their approaches during the workshop. 
+            <!-- The workshop also encourages submission of <strong>papers relevant to state-of-the-art methods</strong>,  -->
+            <!-- new datasets, and real-world use cases for ID document tampering generation and detection.  -->
+            <!-- The attendees interested in security, adversarial robustness, generative models, digital forensics,  -->
+            <!-- and policy implications will find this workshop highly relevant. -->
         </p>
             <h3>The focus of the competition is on:</h3>
             <ul class="timeline-list">
@@ -73,7 +76,7 @@
                 <li><strong>Performing automated visual forensics:</strong> binary classification and localization of forgeries in tampered ID documents.</li>
                 <li><strong>Considering practical deployment</strong> with hardware and software limitations in memory and computational resources for ID forgery detection systems.</li>
             </ul>
-            <h3>The topics of interest for the DeepID workshop include:</h3>
+            <!-- <h3>The topics of interest for the DeepID workshop include:</h3>
             <ul class="timeline-list">
                 <li>Generation of fake ID documents.</li>
                 <li>Inserting manipulations in ID documents</li>
@@ -82,7 +85,7 @@
                 <li>Datasets pertaining to ID documents</li>
                 <li>Evaluation methodologies and metrics for ID documents manipulation detection.</li>
                 <li>Practical implications and considerations related to detecting manipulations in ID documents</li>
-            </ul>
+            </ul> -->
         </div>
     </section>
     <section id="dates" class="dates-section">
@@ -90,21 +93,25 @@
           <!-- <div class="section-header"> -->
             <h2>Important Dates</h2>
           <!-- </div> -->
-           <h3>Competition:</h3>
+           <!-- <h3>Competition:</h3> -->
           <ul class="timeline-list">
+            <li><strong>Registration open:</strong> May 16, 2025</li>
             <li><strong>Release of the ID card dataset and baseline code:</strong> May 23, 2025</li>
             <li><strong>Open competition submission platform:</strong> May 30, 2025</li>
+            <li><strong>Challenge overview paper submission:</strong> June 22, 2025</li>
             <li><strong>Close of the submission platform:</strong> July 14, 2025</li>
-            <li><strong>Final evaluation results:</strong> July 15, 2025</li>
+            <li><strong>Final evaluation results:</strong> July 24, 2025</li>
+            <li><strong>Camera ready overview paper:</strong> June 22, 2025</li>
+            <li><strong>Workshop:</strong> October 2025 (exact date TBD)</li>
           </ul>
-          <h3>Workshop:</h3>
+          <!-- <h3>Workshop:</h3>
           <ul class="timeline-list">
             <li><strong>Workshop CMT submission open:</strong> May 30, 2025</li>
             <li><strong>Workshop paper submission deadline:</strong> June 22, 2025</li>
             <li><strong>Notification to Authors:</strong> June 28, 2025</li>
             <li><strong>Camera-ready paper deadline:</strong> July 24, 2025</li>
             <li><strong>Workshop:</strong> October 2025 (exact date TBD)</li>
-          </ul>
+          </ul> -->
         </div>
     </section>
     <!--Ended About Section-->
@@ -133,8 +140,10 @@
                 <h3 class="left-h3">Evaluation</h3>
                 <p class="left-description">Participants need to submit Docker containers with pre-trained models. 
                     The baseline model with a baseline Docker code will be provided on May 30.
-                    Evaluation will be performed offline on a standalone GPU machine (RTX3090) with no internet connection on a private <a href="#dataset">dataset</a>. 
-                    For each track, the results of evaluations on the private dataset will be updated regularly in the <a href="#leaderboard">leaderboard</a>.</p>
+                    Evaluation will be performed offline on a standalone GPU machine (RTX3090 with 24GB) with no 
+                    internet connection on a private <a href="#dataset">dataset</a>. 
+                    For each track, the results of evaluations on the private dataset will be 
+                    updated <strong>once per day</strong> in the <a href="#leaderboard">leaderboard</a>.</p>
             <!-- </div>
             <div class="col span_4_of_4 box"> -->
                 <!-- <h3 class="left-h3">Evaluation environment</h3>
@@ -157,7 +166,7 @@
                 as <a href="http://l3i-share.univ-lr.fr/MIDV2020/midv2020.html" target="_blank">MIDV-2020</a> 
                 or <a href="https://github.com/ricardobnjunior/Brazilian-Identity-Document-Dataset" target="_blank">BID</a> 
                 datasets, and private datasets of ID documents for training/tuning their submitted models.
-            The download link to the dataset will be provided upon registration.</p>
+            The download link to the dataset will be provided upon <a href="#participation" target="_blank">registration</a>.</p>
         </div>
         <div class="row">
             <!-- <div class="col span_3_of_4"> -->
@@ -238,7 +247,7 @@
             <h2>Register to Participate</h2>
             <p class="little-description">To participate in the competition, please fill out the registration form</p>
             <p class="little-description">
-                <a href="#participation" target="_blank" class="cta-button">Coming on 23 of May</a>
+                <a href="#participation" target="_blank" class="cta-button">Available on 16 of May</a>
               </p>                          
             <!-- <p class="little-description"><a href="https://forms.gle/your-form-link" target="_blank">Register Here</a></p> -->
         </div>
@@ -248,7 +257,7 @@
             <h2>Leaderboard</h2>
             <p class="little-description">Evaluation results will be posted here regularly during the competition.</p>
             <p class="little-description">
-                <a href="#leaderboard" class="cta-button">Coming soon: Live leaderboard with top submissions</a>
+                <a href="#leaderboard" class="cta-button">Live leaderboard with top submissions (available on 30 of May)</a>
               </p>            
             <!-- <p class="little-description"><i><strong> Coming soon: Live leaderboard with top submissions.</strong></i></p> -->
         </div>
@@ -258,7 +267,12 @@
     <section class="workshop-section" id= "workshop">
         <div class="row">
             <h2>Workshop details</h2>
-            <ul class="bullet-list">
+            <p class="leftp">The workshop will features two prominent keynote speakers, who are very well known in media forensics, 
+                deepfake detection, and face and ID document presentation attack detection. 
+                The overview and results of the challenge will be presented at the workshop. Also, the top teams, 
+                who would be invited as co-authors of the overview paper, will be asked to present the approaches 
+                they used in the challenge. </p>
+            <!-- <ul class="bullet-list">
                 <li>We invite two types of submissions: </li>
                 <ul class="bullet-list">
 
@@ -281,12 +295,10 @@
                 <li>Upon acceptance, each paper must be covered by a full, in-person author registration. One registration may cover up to three papers inclusive of main conference or workshop papers. Virtual registrations will not cover a paper submission - even workshop papers. Registration details can be found <a href="https://iccv.thecvf.com/Conferences/2025/Pricing2">here</a>.</li>
                 
                 <li>Note that everyone must be registered in advance to attend the workshop (even speakers).</li>
-            </ul>
-            <h3>Workshop schedule: TBD</h3>
+            </ul> -->
+            <h3 style="text-align: left;">Workshop schedule: TBD</h3>
         </div>
-    </section>
-    <section class="people-section" id= "workshop"">
-            <div class="row">
+        <div class="row">
             <h2>Keynote Speakers</h2>
         </div>
         <div class="row">
