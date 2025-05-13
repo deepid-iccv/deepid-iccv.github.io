@@ -34,7 +34,7 @@
                     <li><a href="#dates">Timeline</a></li>
                     <li><a href="#competition">Competition</a></li>
                     <li><a href="#dataset">Dataset</a></li>
-                    <li><a href="#participation">Participate</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfacx6fJs9pAz0Ro_nQTNRmApUx9Mr_P1-3-9mljdJ0QrGUZA/viewform?usp=header" target="_blank">Register</a></li>
                     <li><a href="#leaderboard">Leaderboard</a></li>
                     <li><a href="#workshop">Workshop</a></li>                                
                     <li><a href="#organizers">Organizers</a></li>
@@ -61,9 +61,10 @@
             DeepID is the first competition that challenges participants to detect synthetic 
             manipulations (i.e., injection attacks (not presentation attacks)) in ID documents. 
             The results of the competition will be presented and discussed at the ICCV 2025 workshop of the same name.
-            The top perfoming teams in the challenge will be <strong>invited to be co-authors of the overview competition paper</strong>, 
+            The top performing teams in the challenge will be <strong>invited to be co-authors of the overview competition paper</strong>, 
             which will be published in the ICCV proceedings, and will be asked to 
-            present their approaches during the workshop. 
+            present their approaches during the workshop. The first place team will also receive a monetary token of 
+            appreciation provided by <a href="https://www.pxl-vision.com/en/" target="_blank">PXL Vision</a>.
             <!-- The workshop also encourages submission of <strong>papers relevant to state-of-the-art methods</strong>,  -->
             <!-- new datasets, and real-world use cases for ID document tampering generation and detection.  -->
             <!-- The attendees interested in security, adversarial robustness, generative models, digital forensics,  -->
@@ -95,7 +96,7 @@
           <!-- </div> -->
            <!-- <h3>Competition:</h3> -->
           <ul class="timeline-list">
-            <li><strong>Registration open:</strong> May 16, 2025</li>
+            <li><strong>Registration open:</strong> May 14, 2025 - <a href="https://docs.google.com/forms/d/e/1FAIpQLSfacx6fJs9pAz0Ro_nQTNRmApUx9Mr_P1-3-9mljdJ0QrGUZA/viewform?usp=header" target="_blank">Register Now</a></li>
             <li><strong>Release of the ID card dataset and baseline code:</strong> May 23, 2025</li>
             <li><strong>Open competition submission platform:</strong> May 30, 2025</li>
             <li><strong>Challenge overview paper submission:</strong> June 22, 2025</li>
@@ -127,23 +128,28 @@
             <div class="col span_2_of_4 box">
                 <h3>Track 1</h3>
                 <p>Binary classification (bona fide vs. forged). For a given image of ID card, 
-                    submitted models return one score: nearer to 1 means it is a bona fide card 
-                    and nearer to 0, it is a manipulated card.</p>
+                    submitted models return one score from 0 to 1: nearer to 1 means it is a bona fide card 
+                    and nearer to 0, it is a manipulated card. For evaluation, we use F1-score, 
+                    for which we assume a 0.5 decision threshold on the scores computed for all images.</p>
             </div>
             <div class="col span_2_of_4 box">
                 <h3>Track 2</h3>
                 <p>Localization (mask of manipulated regions). For a given image of ID card, 
                     submitted models return a binary mask of the same size as an image: with values at 0 for 
-                    manipulated regions and values at 1 for bona fide regions.</p>
+                    manipulated regions and values at 1 for bona fide regions. For evaluation, 
+                    we compute an image-level F1-score and report an average value across all images.</p>
             </div>
             <!-- <div class="col span_4_of_4 box"> -->
-                <h3 class="left-h3">Evaluation</h3>
+                <h3 class="left-h3">Evaluation details</h3>
                 <p class="left-description">Participants need to submit Docker containers with pre-trained models. 
                     The baseline model with a baseline Docker code will be provided on May 30.
                     Evaluation will be performed offline on a standalone GPU machine (RTX3090 with 24GB) with no 
                     internet connection on a private <a href="#dataset">dataset</a>. 
                     For each track, the results of evaluations on the private dataset will be 
-                    updated <strong>once per day</strong> in the <a href="#leaderboard">leaderboard</a>.</p>
+                    updated <strong>once per day</strong> in the <a href="#leaderboard">leaderboard</a>.
+                    The submissions of participants will be evaluated under equal conditions and using the same
+                    evaluation data.
+                </p>
             <!-- </div>
             <div class="col span_4_of_4 box"> -->
                 <!-- <h3 class="left-h3">Evaluation environment</h3>
@@ -166,13 +172,13 @@
                 as <a href="http://l3i-share.univ-lr.fr/MIDV2020/midv2020.html" target="_blank">MIDV-2020</a> 
                 or <a href="https://github.com/ricardobnjunior/Brazilian-Identity-Document-Dataset" target="_blank">BID</a> 
                 datasets, and private datasets of ID documents for training/tuning their submitted models.
-            The download link to the dataset will be provided upon <a href="#participation" target="_blank">registration</a>.</p>
+            The download link to the dataset will be provided upon <a href="https://docs.google.com/forms/d/e/1FAIpQLSfacx6fJs9pAz0Ro_nQTNRmApUx9Mr_P1-3-9mljdJ0QrGUZA/viewform?usp=header" target="_blank">registration</a>.</p>
         </div>
         <div class="row">
             <!-- <div class="col span_3_of_4"> -->
                 <h3 class="left-h3">Fantasy ID Dataset (for training/tuning)</h3>
                 
-                <p class="left-description"> We provide 262 fantasy ID cards designed to resemble ID documents of 
+                <p class="left-description"> We provide 262 Fantasy ID cards designed to resemble ID documents of 
                     10 different countries and languages. 
                     The cards were printed using Evolis Primacy 2 card printer and scanned with three devices (iPhone 15 Pro, Huawei Mate 30, 
                     and Kyocera TASKalfa 2554ci office scanner), resulting in 786 images. 
@@ -181,17 +187,24 @@
                     In the dataset, one type of attack has one method for face swapping and one method for text inpainting.
                     <!-- The manipulated images were again printed with card printer and scanned with the same three devices.  -->
                     In the end,
-                    there are 786*2=1572 manipulated samples. 
+                    there are 786*2=1572 manipulated samples. This data will be publicly released after the competition.
                 </p>
             <!-- </div>
             <div class="col span_3_of_4"> -->
-                <h3 class="left-h3">Private test dataset (hidden testing)</h3>
-                <p class="left-description">A private undisclosed set of bona fide (10K of ID documents) 
-                    from real individuals, provided by the ID verification company (PXL Vision) 
-                    and their forged versions (also 10K). This data will be used 
-                    for final evaluation and no samples will be released. 
+                <h3 class="left-h3">In-domain test dataset</h3>
+                <p class="left-description">This test dataset is based on a different set of Fantasy ID cards. It will be used 
+                    for testing the submitted models. It will also include manipulations that are not 
+                    present in the training data, which means this test set includes in-domain bona fide but unknown attacks.
+                    This test dataset will be publicly released after the competition.
                     The <a href="#leaderboard">Leaderboard</a> with the 
-                    evaluation results on these 10K samples will be updated every day during the competition. </p>
+                    evaluation results on this test dataset will be updated every day during the competition. </p>
+                <h3 class="left-h3">Private out-of-domain test dataset (hidden testing)</h3>
+                <p class="left-description">This private undisclosed set consists of bona fide images of ID documents 
+                    from real individuals, provided by the ID verification company (PXL Vision), 
+                    and their forged versions. This data represents out-of-domain set and will be used 
+                    for evaluation only; no samples will be released or shown.
+                    The <a href="#leaderboard">Leaderboard</a> with the 
+                    evaluation results on these private samples will be updated every day during the competition. </p>
             <!-- </div> -->
         </div>
         <div class="row">
@@ -242,12 +255,12 @@
     
 
     <!--Started Registration Section -->
-    <section class="registration-section" id="participation">
+    <section class="registration-section" id="registration">
         <div class="row">
             <h2>Register to Participate</h2>
             <p class="little-description">To participate in the competition, please fill out the registration form</p>
             <p class="little-description">
-                <a href="#participation" target="_blank" class="cta-button">Available on 16 of May</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfacx6fJs9pAz0Ro_nQTNRmApUx9Mr_P1-3-9mljdJ0QrGUZA/viewform?usp=header" target="_blank" class="cta-button">Register</a>
               </p>                          
             <!-- <p class="little-description"><a href="https://forms.gle/your-form-link" target="_blank">Register Here</a></p> -->
         </div>
@@ -365,8 +378,8 @@
                     <!-- <p><a href="https://www.linkedin.com/in/nevenashamoska/" target="_blank">LinkedIn page</a></p>                     -->
                 </div>
                 <div class="col span_1_of_4 box">
-                    <a href="https://www.linkedin.com/in/magdalena-polac/" target="_blank"><img alt="Magda Połlać" src="images/people/magda_pollac.jpg" class="team-member"></a>
-                    <h3>Magda Połlać</h3>
+                    <a href="https://www.linkedin.com/in/magdalena-polac/" target="_blank"><img alt="Magdalena Połlać" src="images/people/magda_pollac.jpg" class="team-member"></a>
+                    <h3>Magdalena Połać</h3>
                     <span class="role">PXL Vision</span>
                     <!-- <p>ID document verification</p> -->
                     <div class="affiliation">
