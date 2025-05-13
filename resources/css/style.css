@@ -103,6 +103,7 @@ header {
 .main-nav {
   float: right;
   margin-top: 4rem;
+  margin-right: 2rem;
 }
 
 .main-nav li {
