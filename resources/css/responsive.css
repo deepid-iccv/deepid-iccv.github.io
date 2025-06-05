@@ -1,23 +1,23 @@
 @media only screen and (max-width: 1200px)
 {
-    header{
+    /* header{
         height: 65vh;
-    }
+    } */
 }
 @media only screen and (max-width: 1024px)
 {
-    header{
+    /* header{
         height: 55vh;
-    }
+    } */
     .row{
         margin: 0 1.5rem;
     }
     .hero-text-box{
         width: 90%;
     }
-    .main-nav{
+    /* .main-nav{
         display: none;
-    }
+    } */
     html{
         font-size: 57.5%;
     }
@@ -71,9 +71,9 @@
 }
 @media only screen and (max-width: 480px)
 {
-    header{
+    /* header{
         height: 75vh;
-    }
+    } */
     .span_1_of_4{
         width: 100%;
     }
@@ -113,9 +113,9 @@
         display: block;
     }
 
-    .main-nav {
+    /* .main-nav {
         display: none;
-    }
+    } */
 
     .main-nav.active {
         display: block;
@@ -157,9 +157,9 @@
         margin-right: 2rem;
     }
 
-    .main-nav {
+    /* .main-nav {
         display: none;
-    }
+    } */
 
     .main-nav.active {
         display: block;

@@ -68,7 +68,7 @@ header {
   background-position: center;
   background-attachment: fixed;    
   text-align: center;
-  height: 45vh;
+  /* height: 45vh; */
   /* position: relative; */
 }
 
@@ -104,6 +104,7 @@ header {
   float: right;
   margin-top: 4rem;
   margin-right: 2rem;
+  /* margin-right: 1rem; */
 }
 
 .main-nav li {
@@ -136,13 +137,19 @@ header {
 }
 
 .hero-text-box{
+  position:relative;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+/* .hero-text-box{
   position:absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%,-20%);
   text-align: center;
   width: 114rem;
-}
+} */
 
 .btn-hero:link, 
 .btn-hero:visited {
