@@ -447,7 +447,10 @@ f1 = 2 * precision * recall / (precision + recall + 1e-8)
 </code></pre>           
             The final f1-score is a mean of two f1-score means computed for each bonafide and attack classes 
             <code>(mean(bonafide_f1_scores) + mean(attack_f1_scores)) / 2</code>, 
-            so that the class with larger number of samples would not dominate the final f1-score.
+            so that the class with larger number of samples would not dominate the final f1-score.<br>
+             <strong>Aggregate F1</strong> is computed from two f1-scores on fantasy ID cards test set and 
+             on Private set of real documents as weighted average: <code>f1_fantasy*0.3 + f1_private*0.7</code>.
+             This approach puts more importance on the results from Private set.
              </p>
                          <!-- <p class="little-description"><i><strong> Coming soon: Live leaderboard with top submissions.</strong></i></p> -->
         </div>
