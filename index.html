@@ -287,11 +287,169 @@
     <section class="registration-section" id="leaderboard">
         <div class="row">
             <h2>Leaderboard</h2>
-            <p class="little-description">Evaluation results will be posted here regularly during the competition.</p>
+            <p class="little-description">Evaluation results are posted for each track (detection and localization) separately. 
+                The submissions are sorted by the aggregate F1 score (at the moment by 'F1 on fantasy'). The 'baseline' team in the tables
+                is the baseline TruFor model we provide in <a href="https://github.com/deepid-iccv/baseline-docker">baseline docker code</a>. 
+                If your submission is not listed, it means we could not process the docker, so 
+                we could not read it (please submit the tarball in .tgz format, not zip), it was invalid, or it did not adhere to the API. 
+                Please use our <a href="https://github.com/deepid-iccv/baseline-docker">baseline docker code</a> for preparing the submission 
+                and adhere to the suggested convention for naming the docker files <code>< team_name >_< track_name >_< algorithm_name >_< version >.tgz,</code> because we rely on the names to extract team, algorithm, and versions. 
+             </p>
+
+            <h3 class="left-h3">Detection track results</h3>
             <p class="little-description">
-                <a href="#leaderboard" class="cta-button">Live leaderboard with top submissions (available on 30 of May)</a>
-              </p>            
-            <!-- <p class="little-description"><i><strong> Coming soon: Live leaderboard with top submissions.</strong></i></p> -->
+<table class="dataframe summary-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Team</th>
+      <th>Algorithm</th>
+      <th>Version</th>
+      <th>Runtime-fantasy</th>
+      <th>F1 on fantasy</th>
+      <th>F1 on private set</th>
+      <th>Aggregate F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>baseline</td>
+      <td>trufor</td>
+      <td>v0.1</td>
+      <td>0:59:31</td>
+      <td>0.806712</td>
+      <td>pending</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td>ens-epfl</td>
+      <td>mixed</td>
+      <td>v1</td>
+      <td>3:05:55</td>
+      <td>0.678535</td>
+      <td>pending</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td>VISION</td>
+      <td>trufor</td>
+      <td>v1</td>
+      <td>0:57:22</td>
+      <td>0.570987</td>
+      <td>pending</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td>DUCS</td>
+      <td>resnet</td>
+      <td>v1</td>
+      <td>0:03:08</td>
+      <td>0.287439</td>
+      <td>pending</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td>Incode</td>
+      <td>incodetech</td>
+      <td>v1</td>
+      <td>2:52:48</td>
+      <td>0.262342</td>
+      <td>pending</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td>ens-epfl</td>
+      <td>wtm</td>
+      <td>v1</td>
+      <td>3:09:07</td>
+      <td>0.113580</td>
+      <td>pending</td>
+      <td>pending</td>
+    </tr>
+  </tbody>
+</table>
+                <!-- <a href="#leaderboard" class="cta-button">Live leaderboard with top submissions (available on 30 of May)</a> -->
+            </p>            
+            <h3 class="left-h3">Localization track results</h3>
+            <p class="little-description">
+<table class="dataframe summary-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Team</th>
+      <th>Algorithm</th>
+      <th>Version</th>
+      <th>Runtime-fantasy</th>
+      <th>F1 on fantasy</th>
+      <th>F1 on private set</th>
+      <th>Aggregate F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>VISION</td>
+      <td>trufor</td>
+      <td>v1</td>
+      <td>0:57:22</td>
+      <td>0.611732</td>
+      <td>pending</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td>baseline</td>
+      <td>trufor</td>
+      <td>v0.1</td>
+      <td>0:59:31</td>
+      <td>0.589801</td>
+      <td>pending</td>
+      <td>pending</td>
+    </tr>
+    <tr>
+      <td>ens-epfl</td>
+      <td>wtm</td>
+      <td>v1</td>
+      <td>3:09:07</td>
+      <td>0.500000</td>
+      <td>pending</td>
+      <td>pending</td>
+    </tr>
+  </tbody>
+</table>
+            </p>
+            <h3 class="left-h3">How we computed the tables</h3>
+            <p class="little-description">
+                We ran all valid dockers on the dataset. At the moment, we have results for the test set of fantasy ID cards, which has 1385 cards.
+                Algorithm name and version columns are parsed from the file names of your submissions. Runtime-db_name column shows how long it took 
+                for the docker to finish. Note that if it ran longer than 2 hours on Fantasy dataset (1385 samples), 
+                it means the docker was not using a GPU, even though it was running on the machine with one. 
+                We may stop running the dockers if they do not use a GPU, because private dataset is 20K images and it will take too long in that case.<br>
+                <strong>F1 detection score</strong> is computed on one dataset from the predicted scores of each image by 
+                using <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html">f1-score function</a> from scikit-learn like this:
+                <code>f1_score(labels, pred_labels, average='weighted')</code>. It means the f1-score is weighted per class (bonafide and attack), which is a better way to compute 
+                f1-score when the data is unbalanced (our case). We used the decision threshold of 0.5 for computing the predicted label, assuming 
+                1 is a bonafide and 0 is an attack.<br>
+                <strong>F1 localization score</strong> is computed for each image independently as following:
+
+<pre><code>if sample.is_bonafide:
+    # Fully bonafide image: the whole image is 1 (no altered regions), 
+    # bonafide pixels are positives, zeros are negatives
+    # We want high F1 if the model predicted mostly 1s (bonafide)
+    tp = np.sum(mask == 1)  # all pixels should be 1s in the mask
+    fn = np.sum(mask == 0)  # any zeros are falsely detected as a negative class
+    tn = 0
+    fp = 0
+else:
+    tn = np.sum(mask * gt_mask)
+    tp = np.sum((~mask) * (~gt_mask))
+    fp = np.sum((~mask) * gt_mask)
+    fn = np.sum(mask * (~gt_mask))
+precision = tp / (tp + fp + 1e-8)
+recall = tp / (tp + fn + 1e-8)
+f1 = 2 * precision * recall / (precision + recall + 1e-8)
+</code></pre>           
+            The final f1-score is a mean of two f1-score means computed for each bonafide and attack classes 
+            <code>(mean(bonafide_f1_scores) + mean(attack_f1_scores)) / 2</code>, 
+            so that the class with larger number of samples would not dominate the final f1-score.
+             </p>
+                         <!-- <p class="little-description"><i><strong> Coming soon: Live leaderboard with top submissions.</strong></i></p> -->
         </div>
     </section>
     <!--Ended Registration Section-->
