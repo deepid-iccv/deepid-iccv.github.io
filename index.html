@@ -297,7 +297,7 @@
                 and adhere to the suggested convention for naming the docker files <code>< team_name >_< track_name >_< algorithm_name >_< version >.tgz,</code> because we rely on the names to extract team, algorithm, and versions. 
              </p>
 
-            <h3 class="left-h3">Detection track results (updated on June 11, 2025)</h3>
+            <h3 class="left-h3">Detection track results (updated on June 12, 2025)</h3>
             <p class="little-description">
 <table class="dataframe summary-table">
   <thead>
@@ -307,7 +307,8 @@
       <th>Version</th>
       <th>Runtime-fantasy</th>
       <th>F1 on fantasy</th>
-      <th>F1 on private set</th>
+      <th>Runtime-private</th>
+      <th>F1 on private</th>
       <th>Aggregate F1</th>
     </tr>
   </thead>
@@ -318,17 +319,9 @@
       <td>v0.1</td>
       <td>0:59:31</td>
       <td>0.806712</td>
-      <td>pending</td>
-      <td>pending</td>
-    </tr>
-    <tr>
-      <td>ens-epfl</td>
-      <td>mixed</td>
-      <td>v1</td>
-      <td>3:05:55</td>
-      <td>0.678535</td>
-      <td>pending</td>
-      <td>pending</td>
+      <td>1:21:49</td>
+      <td>0.662223</td>
+      <td>0.705569</td>
     </tr>
     <tr>
       <td>VISION</td>
@@ -336,8 +329,19 @@
       <td>v1</td>
       <td>0:57:22</td>
       <td>0.570987</td>
-      <td>pending</td>
-      <td>pending</td>
+      <td>1:17:05</td>
+      <td>0.750676</td>
+      <td>0.696769</td>
+    </tr>
+    <tr>
+      <td>Incode</td>
+      <td>IccvDeepID</td>
+      <td>v101</td>
+      <td>0:09:36</td>
+      <td>0.530098</td>
+      <td>1:33:56</td>
+      <td>0.592735</td>
+      <td>0.573944</td>
     </tr>
     <tr>
       <td>DUCS</td>
@@ -345,17 +349,39 @@
       <td>v1</td>
       <td>0:03:08</td>
       <td>0.287439</td>
-      <td>pending</td>
-      <td>pending</td>
+      <td>0:30:25</td>
+      <td>0.692947</td>
+      <td>0.571295</td>
+    </tr>
+    <tr>
+      <td>IDNT</td>
+      <td>docauth</td>
+      <td>v0.1</td>
+      <td>0:05:41</td>
+      <td>0.270741</td>
+      <td>0:44:24</td>
+      <td>0.443198</td>
+      <td>0.391461</td>
+    </tr>
+    <tr>
+      <td>ens-epfl</td>
+      <td>mixed</td>
+      <td>v1</td>
+      <td>3:05:55</td>
+      <td>0.678535</td>
+      <td>timed out >20h</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <td>Incode</td>
-      <td>incodetech</td>
-      <td>v1</td>
+      <td>iccv-deepid</td>
+      <td>v10</td>
       <td>2:52:48</td>
       <td>0.262342</td>
-      <td>pending</td>
-      <td>pending</td>
+      <td>timed out >20h</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <td>ens-epfl</td>
@@ -363,14 +389,15 @@
       <td>v1</td>
       <td>3:09:07</td>
       <td>0.113580</td>
-      <td>pending</td>
-      <td>pending</td>
+      <td>timed out >20h</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
                 <!-- <a href="#leaderboard" class="cta-button">Live leaderboard with top submissions (available on 30 of May)</a> -->
             </p>            
-            <h3 class="left-h3">Localization track results (updated on June 11, 2025)</h3>
+            <h3 class="left-h3">Localization track results (updated on June 12, 2025)</h3>
             <p class="little-description">
 <table class="dataframe summary-table">
   <thead>
@@ -380,7 +407,8 @@
       <th>Version</th>
       <th>Runtime-fantasy</th>
       <th>F1 on fantasy</th>
-      <th>F1 on private set</th>
+      <th>Runtime-private</th>
+      <th>F1 on private</th>
       <th>Aggregate F1</th>
     </tr>
   </thead>
@@ -391,8 +419,9 @@
       <td>v1</td>
       <td>0:57:22</td>
       <td>0.611732</td>
-      <td>pending</td>
-      <td>pending</td>
+      <td>1:17:05</td>
+      <td>0.970424</td>
+      <td>0.862816</td>
     </tr>
     <tr>
       <td>baseline</td>
@@ -400,8 +429,19 @@
       <td>v0.1</td>
       <td>0:59:31</td>
       <td>0.589801</td>
-      <td>pending</td>
-      <td>pending</td>
+      <td>1:21:49</td>
+      <td>0.877956</td>
+      <td>0.791509</td>
+    </tr>
+    <tr>
+      <td>IDNT</td>
+      <td>docauth</td>
+      <td>v0.1</td>
+      <td>0:05:41</td>
+      <td>0.037968</td>
+      <td>0:44:24</td>
+      <td>0.001866</td>
+      <td>0.012696</td>
     </tr>
     <tr>
       <td>ens-epfl</td>
@@ -409,8 +449,9 @@
       <td>v1</td>
       <td>3:09:07</td>
       <td>0.500000</td>
-      <td>pending</td>
-      <td>pending</td>
+      <td>timed out >20h</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
