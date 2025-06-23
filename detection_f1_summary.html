@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>detection Leaderboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .summary-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .summary-table th, .summary-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .summary-table th {
+            background-color: #f2f2f2;
+        }
+        h3.left-h3 {
+            text-align: left;
+        }
+        .little-description {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3 class="left-h3">All of the detection track results (updated on June 23, 2025)</h3>
+    <p class="little-description">
+    <table class="dataframe summary-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Team</th>
+      <th>Algorithm</th>
+      <th>Version</th>
+      <th>Runtime-fantasy</th>
+      <th>F1 on fantasy</th>
+      <th>Runtime-private</th>
+      <th>F1 on private</th>
+      <th>Aggregate F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>baseline</td>
+      <td>trufor</td>
+      <td>v0.1</td>
+      <td>0:44:46</td>
+      <td>0.806712</td>
+      <td>1:09:49</td>
+      <td>0.662223</td>
+      <td>0.705569</td>
+    </tr>
+    <tr>
+      <td>UAMBiDALab</td>
+      <td>trufor</td>
+      <td>v0.0</td>
+      <td>0:58:01</td>
+      <td>0.806712</td>
+      <td>1:22:26</td>
+      <td>0.662223</td>
+      <td>0.705569</td>
+    </tr>
+    <tr>
+      <td>Reagvis</td>
+      <td>trufor</td>
+      <td>v1</td>
+      <td>0:04:01</td>
+      <td>0.797183</td>
+      <td>0:47:34</td>
+      <td>0.659443</td>
+      <td>0.700765</td>
+    </tr>
+    <tr>
+      <td>VISION</td>
+      <td>trufor</td>
+      <td>v1</td>
+      <td>1:02:18</td>
+      <td>0.570987</td>
+      <td>1:30:46</td>
+      <td>0.750676</td>
+      <td>0.696769</td>
+    </tr>
+    <tr>
+      <td>Incode</td>
+      <td>IccvDeepID</td>
+      <td>v000</td>
+      <td>0:09:58</td>
+      <td>0.688244</td>
+      <td>1:37:33</td>
+      <td>0.655313</td>
+      <td>0.665193</td>
+    </tr>
+    <tr>
+      <td>Incode</td>
+      <td>IccvDeepID</td>
+      <td>v002</td>
+      <td>0:10:08</td>
+      <td>0.468096</td>
+      <td>1:29:00</td>
+      <td>0.655425</td>
+      <td>0.599227</td>
+    </tr>
+    <tr>
+      <td>Incode</td>
+      <td>IccvDeepID</td>
+      <td>v003</td>
+      <td>0:15:33</td>
+      <td>0.431743</td>
+      <td>2:15:14</td>
+      <td>0.655444</td>
+      <td>0.588334</td>
+    </tr>
+    <tr>
+      <td>Incode</td>
+      <td>IccvDeepID</td>
+      <td>v101</td>
+      <td>0:09:36</td>
+      <td>0.530098</td>
+      <td>1:33:56</td>
+      <td>0.592735</td>
+      <td>0.573944</td>
+    </tr>
+    <tr>
+      <td>DUCS</td>
+      <td>resnet</td>
+      <td>v1</td>
+      <td>0:03:08</td>
+      <td>0.287439</td>
+      <td>0:30:25</td>
+      <td>0.692947</td>
+      <td>0.571295</td>
+    </tr>
+    <tr>
+      <td>SuperIdolSmile</td>
+      <td>unet</td>
+      <td>v0.1</td>
+      <td>0:12:17</td>
+      <td>0.504641</td>
+      <td>0:52:13</td>
+      <td>0.455609</td>
+      <td>0.470319</td>
+    </tr>
+    <tr>
+      <td>IDNT</td>
+      <td>docauth</td>
+      <td>v0.2</td>
+      <td>0:42:55</td>
+      <td>0.292947</td>
+      <td>5:38:01</td>
+      <td>0.450125</td>
+      <td>0.402972</td>
+    </tr>
+    <tr>
+      <td>IDNT</td>
+      <td>docauth</td>
+      <td>v0.1</td>
+      <td>0:05:41</td>
+      <td>0.270741</td>
+      <td>0:44:24</td>
+      <td>0.443198</td>
+      <td>0.391461</td>
+    </tr>
+    <tr>
+      <td>Incode</td>
+      <td>IccvDeepID</td>
+      <td>v001</td>
+      <td>0:09:44</td>
+      <td>0.077130</td>
+      <td>1:31:53</td>
+      <td>0.093446</td>
+      <td>0.088551</td>
+    </tr>
+    <tr>
+      <td>ens-epfl</td>
+      <td>mixed</td>
+      <td>v1</td>
+      <td>3:05:55</td>
+      <td>0.678535</td>
+      <td>timed out >20h</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>Incode</td>
+      <td>iccv-deepid</td>
+      <td>v10</td>
+      <td>2:52:48</td>
+      <td>0.262342</td>
+      <td>timed out >20h</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>ens-epfl</td>
+      <td>wtm</td>
+      <td>v1</td>
+      <td>3:09:07</td>
+      <td>0.113580</td>
+      <td>timed out >20h</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+    
+</body>
+</html>
